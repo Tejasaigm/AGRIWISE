@@ -1,0 +1,358 @@
+.marketplace-page {
+    padding: 40px 0 80px;
+}
+
+.page-header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: #64748b;
+    font-size: 16.5px;
+}
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    align-items: center;
+    background: white;
+    padding: 16px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f1f5f9;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 260px;
+    padding: 14px 18px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.search-input:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.filters-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-select,
+.view-btn {
+    padding: 12px 16px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    background: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.view-toggle {
+    display: flex;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.view-btn {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: none;
+    font-size: 18px;
+    transition: all 0.2s;
+}
+
+.view-btn.active {
+    background: #16a34a;
+    color: white;
+}
+
+/* Quick Filters */
+.quick-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.grade-btn,
+.filter-chip {
+    padding: 10px 18px;
+    border-radius: 9999px;
+    font-size: 13.5px;
+    font-weight: 600;
+    border: 1.5px solid #e2e8f0;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.grade-btn.active,
+.filter-chip.active {
+    border-color: #16a34a;
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.clear-btn {
+    padding: 10px 18px;
+    color: #ef4444;
+    font-weight: 600;
+}
+
+/* Product Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #f1f5f9;
+}
+
+.product-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+    border-color: #86efac;
+}
+
+.product-image {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+.organic-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #86efac;
+    color: #166534;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 9999px;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.product-header h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.grade-badge {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    flex-shrink: 0;
+}
+
+.location {
+    font-size: 13.5px;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 800;
+    color: #166534;
+}
+
+.unit {
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.quality-bar {
+    margin-bottom: 18px;
+}
+
+.quality-label {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 6px;
+}
+
+.bar {
+    height: 6px;
+    background: #e2e8f0;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: linear-gradient(to right, #16a34a, #4ade80);
+    transition: width 0.8s ease;
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 14px;
+    background: #166534;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.contact-btn:hover {
+    background: #14532d;
+    transform: translateY(-2px);
+}
+
+/* List View */
+.products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.list-item {
+    background: white;
+    border-radius: 16px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.list-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.list-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.list-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list-details {
+    flex: 1;
+}
+
+.list-header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.list-header h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.list-meta {
+    font-size: 13.5px;
+    color: #64748b;
+}
+
+.list-price {
+    font-size: 19px;
+    font-weight: 700;
+    color: #166534;
+    margin-top: 8px;
+}
+
+.list-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: #64748b;
+}
+
+.empty-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+/* Contact Modal */
+.ContactModal {
+    animation: modalPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalPop {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

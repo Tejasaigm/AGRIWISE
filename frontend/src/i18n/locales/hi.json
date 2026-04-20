@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "dashboard": "डैशबोर्ड", "marketplace": "बाज़ार",
+    "myProducts": "मेरे उत्पाद", "addProduct": "उत्पाद जोड़ें",
+    "profile": "प्रोफ़ाइल", "logout": "लॉगआउट", "login": "लॉगिन"
+  },
+  "auth": {
+    "welcomeBack": "वापस स्वागत है",
+    "loginSubtitle": "अपने AgriWise खाते में साइन इन करें",
+    "email": "ईमेल पता", "password": "पासवर्ड",
+    "loginBtn": "साइन इन करें", "noAccount": "खाता नहीं है?",
+    "registerHere": "यहाँ रजिस्टर करें",
+    "farmer": "किसान", "buyer": "खरीदार",
+    "farmerDesc": "फसल सूचीबद्ध करें और बेचें",
+    "buyerDesc": "फसलें ब्राउज़ करें और खरीदें",
+    "name": "पूरा नाम", "phone": "फ़ोन नंबर",
+    "registerBtn": "खाता बनाएं", "hasAccount": "पहले से खाता है?",
+    "loginHere": "यहाँ लॉगिन करें", "languageLabel": "ऐप भाषा"
+  },
+  "farmer": {
+    "dashboardTitle": "किसान डैशबोर्ड",
+    "welcomeMsg": "सुप्रभात, {{name}}! यहाँ आपके खेत का अवलोकन है।",
+    "totalProducts": "कुल उत्पाद", "totalSales": "कुल बिक्री",
+    "activeListings": "सक्रिय सूचियाँ", "pendingOrders": "लंबित ऑर्डर",
+    "addProduct": "नया उत्पाद जोड़ें", "myListings": "मेरी सूचियाँ",
+    "editProduct": "संपादित करें", "deleteProduct": "हटाएं",
+    "productName": "उत्पाद का नाम", "category": "श्रेणी",
+    "price": "मूल्य (₹/किग्रा)", "quantity": "मात्रा (किग्रा)",
+    "location": "स्थान", "description": "विवरण",
+    "uploadImage": "छवि अपलोड करें", "qualityScore": "गुणवत्ता स्कोर",
+    "grade": "ग्रेड", "publishListing": "सूची प्रकाशित करें",
+    "saveDraft": "ड्राफ्ट सहेजें",
+    "noProducts": "अभी तक कोई उत्पाद नहीं। पहला जोड़ें!",
+    "productAdded": "उत्पाद सफलतापूर्वक सूचीबद्ध!",
+    "productUpdated": "उत्पाद अपडेट हुआ!", "productDeleted": "उत्पाद हटाया गया।",
+    "confirmDelete": "क्या आप इस उत्पाद को हटाना चाहते हैं?",
+    "weight": "वज़न (किग्रा)", "delivery": "डिलीवरी उपलब्ध",
+    "pickup": "केवल पिकअप", "organic": "जैविक", "viewAll": "सभी देखें"
+  },
+  "buyer": {
+    "dashboardTitle": "खरीदार डैशबोर्ड",
+    "welcomeMsg": "किसानों से सीधे ताज़ी उपज खरीदें।",
+    "searchPlaceholder": "फसलें, सब्ज़ियाँ, फल खोजें...",
+    "filterByCategory": "श्रेणी से फ़िल्टर", "filterByLocation": "स्थान से फ़िल्टर",
+    "sortBy": "क्रमबद्ध करें", "priceAsc": "मूल्य: कम से अधिक",
+    "priceDesc": "मूल्य: अधिक से कम", "newest": "नवीनतम पहले",
+    "allCategories": "सभी श्रेणियाँ",
+    "contactSeller": "विक्रेता से संपर्क", "viewDetails": "विवरण देखें",
+    "pricePerKg": "₹{{price}}/किग्रा", "available": "{{qty}} किग्रा उपलब्ध",
+    "deliveryAvailable": "डिलीवरी उपलब्ध", "pickupOnly": "केवल पिकअप",
+    "postedBy": "{{name}} द्वारा", "noResults": "कोई उत्पाद नहीं मिला।",
+    "grade": "ग्रेड {{grade}}", "location": "स्थान",
+    "totalOrders": "कुल ऑर्डर", "savedProducts": "सहेजे गए उत्पाद",
+    "recentlyViewed": "हाल ही में देखे गए"
+  },
+  "voice": {
+    "btnTitle": "वॉयस असिस्टेंट", "listening": "सुन रहा हूँ...",
+    "thinking": "प्रसंस्करण कर रहा हूँ...", "tapToSpeak": "बोलने के लिए टैप करें",
+    "youSaid": "आपने कहा", "assistant": "AgriWise AI",
+    "notSupported": "इस ब्राउज़र में वॉयस समर्थित नहीं।",
+    "permissionDenied": "माइक्रोफ़ोन अनुमति अस्वीकृत।",
+    "tryAgain": "पुनः प्रयास"
+  },
+  "commands": {
+    "showProducts": "आपके उत्पाद दिखाए जा रहे हैं।",
+    "listCrops": "बाज़ार में उपलब्ध फसलें यहाँ हैं।",
+    "checkPrice": "आपके लिए बाज़ार मूल्य खुल रहे हैं।",
+    "uploadProduct": "उत्पाद जोड़ें फ़ॉर्म खुल रहा है।",
+    "goToDashboard": "डैशबोर्ड पर जा रहे हैं।",
+    "goToMarketplace": "बाज़ार पर ले जा रहे हैं।",
+    "logout": "लॉगआउट हो रहे हैं। अलविदा!",
+    "help": "कह सकते हैं: मेरे उत्पाद · बाज़ार · कीमत जांचो · उत्पाद जोड़ो · डैशबोर्ड · लॉगआउट।",
+    "unknown": "क्षमा करें, समझ नहीं आया। सभी कमांड देखने के लिए 'मदद' कहें।"
+  },
+  "common": {
+    "loading": "लोड हो रहा है...", "save": "सहेजें", "cancel": "रद्द करें",
+    "delete": "हटाएं", "edit": "संपादित करें", "close": "बंद करें",
+    "confirm": "पुष्टि करें", "search": "खोजें", "filter": "फ़िल्टर",
+    "clear": "साफ करें", "submit": "जमा करें", "back": "वापस",
+    "next": "अगला", "yes": "हाँ", "no": "नहीं",
+    "error": "कुछ गड़बड़ हुई। पुनः प्रयास करें।",
+    "success": "सफल!", "noData": "कोई डेटा नहीं।",
+    "currency": "₹", "perKg": "/किग्रा", "kg": "किग्रा",
+    "all": "सभी", "optional": "वैकल्पिक",
+    "required": "आवश्यक", "uploading": "अपलोड हो रहा है..."
+  },
+  "categories": {
+    "vegetables": "सब्ज़ियाँ", "fruits": "फल",
+    "grains": "अनाज", "pulses": "दालें",
+    "spices": "मसाले", "oilseeds": "तिलहन", "other": "अन्य"
+  }
+}

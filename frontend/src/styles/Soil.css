@@ -1,0 +1,381 @@
+/* ==================== SOIL ANALYSIS PAGE ==================== */
+.soil-analysis-page {
+  padding: 40px 20px 100px;
+  background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.page-header h1 {
+  font-size: clamp(2rem, 5vw, 2.6rem);
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.page-header p {
+  font-size: 1.18rem;
+  color: #475569;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Main Grid */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;
+  align-items: start;
+}
+
+/* ===================== UPLOAD PANEL ===================== */
+.upload-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.dropzone {
+  border: 3px dashed #94a3b8;
+  border-radius: 26px;
+  padding: 80px 30px;
+  text-align: center;
+  cursor: pointer;
+  background: #ffffff;
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 12px 35px -10px rgba(0, 0, 0, 0.09);
+}
+
+.dropzone:hover {
+  border-color: #16a34a;
+  background: #f0fdf4;
+  transform: translateY(-4px);
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 340px;
+  border-radius: 20px;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.18);
+}
+
+.drop-icon {
+  font-size: 5.2rem;
+  margin-bottom: 24px;
+}
+
+.dropzone h3 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #1e2937;
+  margin-bottom: 10px;
+}
+
+.dropzone p {
+  color: #64748b;
+  margin-bottom: 14px;
+  font-size: 1.05rem;
+}
+
+.dropzone small {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.analyze-btn {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: white;
+  border: none;
+  padding: 18px 24px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.35);
+}
+
+.analyze-btn:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(34, 197, 94, 0.45);
+}
+
+.btn-secondary {
+  padding: 15px 24px;
+  border: 2px solid #16a34a;
+  background: transparent;
+  color: #166534;
+  border-radius: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #f0fdf4;
+}
+
+/* Error */
+.error-box {
+  padding: 16px 22px;
+  background: #fef2f2;
+  color: #991b1b;
+  border-radius: 16px;
+  border-left: 6px solid #ef4444;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* How it works */
+.how-it-works {
+  background: #f8fafc;
+  border-radius: 22px;
+  padding: 26px;
+  border: 1px solid #e2e8f0;
+}
+
+.how-it-works h4 {
+  color: #166534;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.how-it-works ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.how-it-works li {
+  margin-bottom: 9px;
+  color: #475569;
+  font-size: 15px;
+}
+
+/* ===================== RESULTS PANEL ===================== */
+.results-panel {
+  position: relative;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* Hero Crop Card */
+.hero-crop-card {
+  background: linear-gradient(135deg, #14532d, #166534);
+  border-radius: 28px;
+  padding: 42px 32px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 25px 45px -15px rgba(20, 83, 45, 0.4);
+}
+
+.crop-icon {
+  font-size: 6rem;
+  margin-bottom: 16px;
+  line-height: 1;
+}
+
+.recommended-label {
+  font-size: 13.5px;
+  opacity: 0.9;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.crop-name {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin: 12px 0 20px;
+  text-transform: capitalize;
+  line-height: 1.1;
+}
+
+.confidence-badge {
+  display: inline-block;
+  padding: 11px 32px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+}
+
+.confidence-badge.high { background: #22c55e; }
+.confidence-badge.medium { background: #eab308; }
+.confidence-badge.low { background: #ef4444; }
+
+/* Fertility Card */
+.fertility-card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  box-shadow: 0 12px 35px -10px rgba(0,0,0,0.1);
+}
+
+.fertility-icon {
+  font-size: 4.2rem;
+}
+
+.fertility-label {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
+.fertility-level {
+  font-size: 2.35rem;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+/* Common Cards */
+.nutrients-card,
+.weather-card,
+.alternatives-card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 12px 35px -10px rgba(0,0,0,0.1);
+}
+
+.nutrients-card h3,
+.weather-card h3,
+.alternatives-card h3 {
+  margin-bottom: 26px;
+  color: #1f2937;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* Weather */
+.weather-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  gap: 20px;
+}
+
+.weather-item {
+  background: #f8fafc;
+  padding: 22px 16px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.weather-icon {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.weather-value {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #1e2937;
+}
+
+.weather-label {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+/* Alternatives */
+.alternatives {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.alt-crop {
+  padding: 12px 24px;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: #166534;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15.2px;
+}
+
+.alt-confidence {
+  font-size: 13.5px;
+  opacity: 0.75;
+}
+
+/* Empty State */
+.empty-state {
+  min-height: 560px;
+  background: white;
+  border-radius: 28px;
+  border: 2px dashed #cbd5e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 40px;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.08);
+}
+
+.empty-icon {
+  font-size: 6.5rem;
+  opacity: 0.65;
+  margin-bottom: 28px;
+}
+
+.empty-state h3 {
+  font-size: 1.55rem;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.empty-state p {
+  color: #64748b;
+  max-width: 280px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 992px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .dropzone {
+    padding: 60px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .soil-analysis-page {
+    padding: 30px 16px 80px;
+  }
+}

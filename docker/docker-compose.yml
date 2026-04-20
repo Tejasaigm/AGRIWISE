@@ -1,0 +1,109 @@
+version: '3.9'
+
+services:
+  # ── PostgreSQL ─────────────────────────────────────────────────────────────
+  postgres:
+    image: postgres:15-alpine
+    container_name: agriwise-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB:       agriwise
+      POSTGRES_USER:     agriwise
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme_in_production}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U agriwise"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks: [agriwise-net]
+
+  # ── Redis ──────────────────────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: agriwise-redis
+    restart: unless-stopped
+    command: redis-server --requirepass ${REDIS_PASSWORD:-changeme_redis}
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+    networks: [agriwise-net]
+
+  # ── FastAPI ML Service ─────────────────────────────────────────────────────
+  ml-service:
+    build:
+      context: ./backend/ml_service
+      dockerfile: Dockerfile
+    container_name: agriwise-ml
+    restart: unless-stopped
+    environment:
+      OPENWEATHER_API_KEY: ${OPENWEATHER_API_KEY}
+      ANTHROPIC_API_KEY:   ${ANTHROPIC_API_KEY}
+      PRICE_CSV_PATH:      /app/data/Agriculture_Commodities_Week.csv
+      SOIL_MODEL_PATH:     /app/models/soil_crop_model.pkl
+      SOIL_SCALER_PATH:    /app/models/soil_scaler.pkl
+      DISEASE_MODEL_PATH:  /app/models/efficientnetb4_plantvillage.h5
+      QUALITY_MODEL_PATH:  /app/models/quality_mobilenetv2.h5
+    volumes:
+      - ./backend/ml_service/data:/app/data:ro
+      - ./backend/ml_service/models:/app/models:ro
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks: [agriwise-net]
+
+  # ── Node.js API Gateway ────────────────────────────────────────────────────
+  api-gateway:
+    build:
+      context: ./backend/api_gateway
+      dockerfile: Dockerfile
+    container_name: agriwise-gateway
+    restart: unless-stopped
+    environment:
+      NODE_ENV:        production
+      PORT:            3000
+      DATABASE_URL:    postgresql://agriwise:${POSTGRES_PASSWORD:-changeme_in_production}@postgres:5432/agriwise
+      REDIS_URL:       redis://:${REDIS_PASSWORD:-changeme_redis}@redis:6379
+      ML_SERVICE_URL:  http://ml-service:8000
+      JWT_SECRET:      ${JWT_SECRET}
+      REFRESH_SECRET:  ${REFRESH_SECRET}
+      FRONTEND_URL:    ${FRONTEND_URL:-http://localhost:5173}
+      RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID}
+      RAZORPAY_SECRET: ${RAZORPAY_SECRET}
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis:    { condition: service_healthy }
+    ports:
+      - "3000:3000"
+    networks: [agriwise-net]
+
+  # ── Frontend (Vite build served by Nginx) ─────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL:-http://localhost:3000}
+    container_name: agriwise-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on: [api-gateway]
+    networks: [agriwise-net]
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  agriwise-net:
+    driver: bridge

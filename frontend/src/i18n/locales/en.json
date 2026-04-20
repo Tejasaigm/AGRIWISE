@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "dashboard": "Dashboard", "marketplace": "Marketplace",
+    "myProducts": "My Products", "addProduct": "Add Product",
+    "profile": "Profile", "logout": "Logout", "login": "Login"
+  },
+  "auth": {
+    "welcomeBack": "Welcome Back",
+    "loginSubtitle": "Sign in to your AgriWise account",
+    "email": "Email Address", "password": "Password",
+    "loginBtn": "Sign In", "noAccount": "Don't have an account?",
+    "registerHere": "Register here", "farmer": "Farmer", "buyer": "Buyer",
+    "farmerDesc": "List and sell your produce",
+    "buyerDesc": "Browse and purchase crops",
+    "name": "Full Name", "phone": "Phone Number",
+    "registerBtn": "Create Account", "hasAccount": "Already have an account?",
+    "loginHere": "Login here", "languageLabel": "App Language"
+  },
+  "farmer": {
+    "dashboardTitle": "Farmer Dashboard",
+    "welcomeMsg": "Good morning, {{name}}! Here's your farm overview.",
+    "totalProducts": "Total Products", "totalSales": "Total Sales",
+    "activeListings": "Active Listings", "pendingOrders": "Pending Orders",
+    "addProduct": "Add New Product", "myListings": "My Listings",
+    "editProduct": "Edit", "deleteProduct": "Delete",
+    "productName": "Product Name", "category": "Category",
+    "price": "Price (₹/kg)", "quantity": "Quantity (kg)",
+    "location": "Location", "description": "Description",
+    "uploadImage": "Upload Image", "qualityScore": "Quality Score",
+    "grade": "Grade", "publishListing": "Publish Listing",
+    "saveDraft": "Save Draft",
+    "noProducts": "No products listed yet. Add your first product!",
+    "productAdded": "Product listed successfully!",
+    "productUpdated": "Product updated!", "productDeleted": "Product removed.",
+    "confirmDelete": "Are you sure you want to delete this product?",
+    "weight": "Weight (kg)", "delivery": "Delivery Available",
+    "pickup": "Pickup Only", "organic": "Organic", "viewAll": "View All"
+  },
+  "buyer": {
+    "dashboardTitle": "Buyer Dashboard",
+    "welcomeMsg": "Find fresh produce directly from farmers.",
+    "searchPlaceholder": "Search crops, vegetables, fruits...",
+    "filterByCategory": "Filter by Category",
+    "filterByLocation": "Filter by Location",
+    "sortBy": "Sort By", "priceAsc": "Price: Low to High",
+    "priceDesc": "Price: High to Low", "newest": "Newest First",
+    "allCategories": "All Categories",
+    "contactSeller": "Contact Seller", "viewDetails": "View Details",
+    "pricePerKg": "₹{{price}}/kg", "available": "{{qty}} kg available",
+    "deliveryAvailable": "Delivery Available", "pickupOnly": "Pickup Only",
+    "postedBy": "by {{name}}", "noResults": "No products found.",
+    "grade": "Grade {{grade}}", "location": "Location",
+    "totalOrders": "Total Orders", "savedProducts": "Saved Products",
+    "recentlyViewed": "Recently Viewed"
+  },
+  "voice": {
+    "btnTitle": "Voice Assistant", "listening": "Listening...",
+    "thinking": "Processing...", "tapToSpeak": "Tap mic to speak",
+    "youSaid": "You said", "assistant": "AgriWise AI",
+    "notSupported": "Voice not supported in this browser.",
+    "permissionDenied": "Microphone permission denied.",
+    "tryAgain": "Try again"
+  },
+  "commands": {
+    "showProducts": "Showing your products now.",
+    "listCrops": "Here are the crops available in the marketplace.",
+    "checkPrice": "Opening market prices for you.",
+    "uploadProduct": "Opening the Add Product form.",
+    "goToDashboard": "Navigating to your dashboard.",
+    "goToMarketplace": "Taking you to the marketplace.",
+    "logout": "Logging you out. Goodbye!",
+    "help": "You can say: Show my products · List crops · Check prices · Add product · Go to dashboard · Logout.",
+    "unknown": "Sorry, I didn't catch that. Say 'help' to see all commands."
+  },
+  "common": {
+    "loading": "Loading...", "save": "Save", "cancel": "Cancel",
+    "delete": "Delete", "edit": "Edit", "close": "Close",
+    "confirm": "Confirm", "search": "Search", "filter": "Filter",
+    "clear": "Clear", "submit": "Submit", "back": "Back",
+    "next": "Next", "yes": "Yes", "no": "No",
+    "error": "Something went wrong. Please try again.",
+    "success": "Done!", "noData": "No data available.",
+    "currency": "₹", "perKg": "/kg", "kg": "kg",
+    "all": "All", "optional": "Optional",
+    "required": "Required", "uploading": "Uploading..."
+  },
+  "categories": {
+    "vegetables": "Vegetables", "fruits": "Fruits",
+    "grains": "Grains & Cereals", "pulses": "Pulses",
+    "spices": "Spices", "oilseeds": "Oilseeds", "other": "Other"
+  }
+}
